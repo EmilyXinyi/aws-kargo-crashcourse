@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kargo-aws
+  namespace: argocd
+spec:
+  description: ArgoCD project for kargo-aws application
+  sourceRepos:
+  - '${GITOPS_REPO_URL}'
+  destinations:
+  - namespace: 'kargo-aws-*'
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceBlacklist:
+  - group: ''
+    kind: ResourceQuota
+  - group: ''
+    kind: LimitRange
+  - group: ''
+    kind: NetworkPolicy

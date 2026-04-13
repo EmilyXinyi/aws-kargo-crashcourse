@@ -1,0 +1,7 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Project
+metadata:
+  name: kargo-aws
+  # A Project is a namespace-scoped resource that contains all Kargo resources
+  # for a given application or team. Creating it will automatically create
+  # a Kubernetes namespace of the same name.
