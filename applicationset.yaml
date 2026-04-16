@@ -22,7 +22,7 @@ spec:
         targetRevision: stage/{{stage}}
         path: .
       destination:
-        server: https://kubernetes.default.svc
+        server: mac2 # the name of your destintation cluser
         namespace: kargo-aws-{{stage}}
       syncPolicy:
         syncOptions:

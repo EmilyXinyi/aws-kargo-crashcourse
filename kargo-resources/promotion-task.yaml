@@ -44,8 +44,8 @@ spec:
   - uses: argocd-update
     config:
       apps:
-      - name: kargo-demo-${{ ctx.stage }}
-        namespace: argocd
+      - name: kargo-aws-${{ ctx.stage }}
+        namespace: kargo-aws-${{ ctx.stage }}
         sources:
         - repoURL: ${{ vars.gitopsRepo }}
           desiredRevision: ${{ task.outputs.commit.commit }}
