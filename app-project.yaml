@@ -7,4 +7,21 @@ spec:
   sourceRepos:
   - '*'
   destinations:
-  - '*'
+  - server: '*'
+    namespace: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  # Safer version (restrict sensitive resources):
+  # namespaceResourceBlacklist:
+  # - group: ''
+  #   kind: 'ResourceQuota'
+  # - group: ''
+  #   kind: 'LimitRange'
+  # - group: ''
+  #   kind: 'NetworkPolicy'
+  # - group: 'networking.k8s.io'
+  #   kind: 'NetworkPolicy'

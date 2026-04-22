@@ -45,7 +45,6 @@ spec:
     config:
       apps:
       - name: kargo-aws-${{ ctx.stage }}
-        namespace: kargo-aws-${{ ctx.stage }}
         sources:
         - repoURL: ${{ vars.gitopsRepo }}
           desiredRevision: ${{ task.outputs.commit.commit }}

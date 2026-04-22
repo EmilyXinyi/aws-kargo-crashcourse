@@ -22,7 +22,7 @@ spec:
         targetRevision: stage/{{stage}}
         path: .
       destination:
-        server: mac2 # the name of your destintation cluser
+        name: eks-workshop # the name of your destintation cluser
         namespace: kargo-aws-{{stage}}
       syncPolicy:
         syncOptions:
