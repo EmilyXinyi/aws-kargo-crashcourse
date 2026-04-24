@@ -29,7 +29,7 @@ export GITHUB_PAT=<your PAT>
 
 Creating some Argo CD applications 
 
-`envsubst < applicationset.yaml | akuity argocd apply -f - --name <argocd instance name> --org-name=<org name>`
+`envsubst < apps/applicationset.yaml | akuity argocd apply -f - --name <argocd instance name> --org-name=<org name>`
 
 In the Argo CD dashboard, you should see three Applications:
 
@@ -49,7 +49,7 @@ Kargo needs credentials to access your GitOps repository. This is a crucial step
 
 Create a Warehouse to discover new versions of container images.
 
-akuity kargo apply -f kargo-resources/warehouse.yaml --name <kargo instance name> --org-name=<org name> 
+`akuity kargo apply -f kargo-resources/warehouse.yaml --name <kargo instance name> --org-name=<org name> `
 
 Create the PromotionTask that defines how Freight gets promoted.
 
@@ -60,8 +60,6 @@ Create three stages (test, uat, prod) to form your deployment pipeline.
 `akuity kargo apply -f kargo-resources/stages.yaml --name <kargo instance name> --org-name=<org name> ` 
 
 The pipeline is now ready! Freight discovered by the Warehouse can be promoted through the stages, with each stage requiring the previous stage to be healthy before promotion is allowed.
-
----- TODOL: above can be wrapped in declarative spec --- or put it in a a sandbox environment for AKP ---- 
 
 Your first promotion
 * drag and drop to test 
@@ -75,6 +73,9 @@ Your first promotion
 # Bonus tasks
 
 * Create a new freight and promote it 
-* Turn on auto-promotion
 * Perform a roll back
+* Turn on auto-promotion
+* Change colours of the stages
 * Add another step to promotion steps 
+    - Make Kargo say "hello" with custom steps! 
+* Use Argo CD to orchestrate Kargo resources (hint: App-of-Apps pattern)

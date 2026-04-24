@@ -22,7 +22,7 @@ spec:
         targetRevision: stage/{{stage}}
         path: .
       destination:
-        name: eks-workshop # the name of your destintation cluser
+        name: argo-agent # REPLACE THIS: the name of your destintation cluser
         namespace: kargo-aws-{{stage}}
       syncPolicy:
         syncOptions:
