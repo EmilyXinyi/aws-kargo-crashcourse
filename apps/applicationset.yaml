@@ -18,7 +18,7 @@ spec:
     spec:
       project: kargo-aws
       source:
-        repoURL: ${GITOPS_REPO_URL}
+        repoURL: https://github.com/emilyxinyi/aws-kargo-crashcourse.git # REPLACE THIS: the URL of your git repository
         targetRevision: stage/{{stage}}
         path: .
       destination:
