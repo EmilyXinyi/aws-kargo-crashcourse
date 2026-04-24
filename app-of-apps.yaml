@@ -7,7 +7,7 @@ spec:
   syncPolicy:
     automated: {}
   source:
-    repoURL: https://github.com/emilyxinyi/aws-kargo-crashcourse.git
+    repoURL: https://github.com/emilyxinyi/aws-kargo-crashcourse.git # REPLACE THIS: the URL of your git repository
     targetRevision: main
     path: apps
     directory:
