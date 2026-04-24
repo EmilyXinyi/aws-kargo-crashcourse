@@ -5,7 +5,7 @@ metadata:
 spec:
   project: kargo-aws
   source:
-    repoURL: https://github.com/emilyxinyi/kargo-aws-crashcourse.git
+    repoURL: https://github.com/emilyxinyi/aws-kargo-crashcourse.git
     path: kargo-resources
   destination:
     name: kargo1
