@@ -2,7 +2,7 @@
 A hands-on Kargo crash course for AWS Container Days
 
 # Prerequisites 
-* Akuity account 
+* Akuity account (https://training.akuity.cloud) 
 * EKS cluster 
 * Argo CD Instance 
 * Kargo Instance
@@ -11,8 +11,8 @@ A hands-on Kargo crash course for AWS Container Days
 * A personal access token (PAT) at grants read and write access to this repo 
 
 # Step-by-Step Instructions
-create your argo cd agent (ie. register this cluster to the control plane)
-create your kargo agent
+* create your argo cd agent (ie. register this cluster to the control plane)
+* create your kargo agent
 
 `akuity login`
 
