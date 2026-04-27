@@ -1,8 +1,6 @@
 # aws-kargo-crashcourse
 A hands-on Kargo crash course for AWS Container Days
 
-It is currently a WIP and constantly evolving
-
 # Prerequisites 
 * Akuity account 
 * EKS cluster 
