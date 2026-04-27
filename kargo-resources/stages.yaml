@@ -5,7 +5,7 @@ metadata:
   name: test
   namespace: kargo-aws
 spec:
-  shard: self-hosted-kargo-agent
+  # shard: self-hosted-kargo-agent
   requestedFreight:
   - origin:
       kind: Warehouse
